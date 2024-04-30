@@ -78,14 +78,13 @@ fun Expenses(expenses: List<Expense>) {
 
 @Composable
 fun ExpenseCard(expense: Expense) {
-    val borderColor = Color(0xFFB1A17E)
-
+    val borderColor = Color(expense.amount.hashCode())
     OutlinedCard(
         modifier = Modifier
             .fillMaxWidth()
             .height(85.dp)
             .padding(vertical = 4.dp),
-        border = BorderStroke(1.dp, borderColor),
+        border = BorderStroke(2.dp, borderColor),
         ) {
         Row(
             modifier = Modifier
