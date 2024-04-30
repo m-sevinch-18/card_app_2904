@@ -17,6 +17,7 @@ import androidx.compose.material3.CardColors
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -34,7 +35,9 @@ import androidx.compose.ui.unit.dp
 fun Expenses(expenses: List<Expense>) {
      Surface(
          color = Color.White, // Set the background color to white
-         modifier = Modifier.padding(vertical = 4.dp).padding(horizontal = 20.dp)
+         modifier = Modifier
+             .padding(vertical = 4.dp)
+             .padding(horizontal = 10.dp)
      ) {
          Scaffold(
              topBar = {
@@ -57,7 +60,9 @@ fun Expenses(expenses: List<Expense>) {
              }
          ) {
              LazyColumn(
-                 modifier = Modifier.fillMaxSize().padding(top = 60.dp),
+                 modifier = Modifier
+                     .fillMaxSize()
+                     .padding(top = 60.dp),
                  contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
              ) {
                  items(expenses) { expense ->
@@ -73,17 +78,14 @@ fun Expenses(expenses: List<Expense>) {
 
 @Composable
 fun ExpenseCard(expense: Expense) {
-    val borderColor = Color(expense.name.hashCode())
-    Card(
+    val borderColor = Color(expense.amount.hashCode())
+    OutlinedCard(
         modifier = Modifier
             .fillMaxWidth()
             .height(85.dp)
             .padding(vertical = 4.dp),
         border = BorderStroke(2.dp, borderColor),
-
-
-
-    ) {
+        ) {
         Row(
             modifier = Modifier
                 .fillMaxSize()
