@@ -36,7 +36,7 @@ fun Expenses(expenses: List<Expense>) {
      Surface(
          color = Color.White, // Set the background color to white
          modifier = Modifier
-             .padding(vertical = 4.dp)
+             .padding(vertical = 7.dp)
              .padding(horizontal = 10.dp)
      ) {
          Scaffold(
@@ -78,13 +78,14 @@ fun Expenses(expenses: List<Expense>) {
 
 @Composable
 fun ExpenseCard(expense: Expense) {
-    val borderColor = Color(expense.amount.hashCode())
+    val borderColor = Color(0xFFB1A17E)
+
     OutlinedCard(
         modifier = Modifier
             .fillMaxWidth()
             .height(85.dp)
             .padding(vertical = 4.dp),
-        border = BorderStroke(2.dp, borderColor),
+        border = BorderStroke(1.dp, borderColor),
         ) {
         Row(
             modifier = Modifier
@@ -98,7 +99,7 @@ fun ExpenseCard(expense: Expense) {
                 fontWeight = FontWeight.Bold
             )
             Text(
-                text = "$${expense.amount}",
+                text = "-${expense.amount} so'm",
                 color = Color.Black
             )
         }
