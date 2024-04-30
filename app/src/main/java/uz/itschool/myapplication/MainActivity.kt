@@ -25,13 +25,13 @@ class MainActivity : ComponentActivity() {
 
 
                     val expenses = listOf(
-                        Expense("Bought a phone",1000000f),
-                        Expense("Bought a sofa",2000000f),
-                        Expense("Payed for account",3000000f),
-                        Expense("Payed for electricity",4000000f),
-                        Expense("Payed for internet usage",5000000f),
-                        Expense("Payed for water usage",5000000f),
-                        Expense("Bought a computer",5000000f),
+                        Expense("Bought a phone",1000000f,"30-04-2024"),
+                        Expense("Bought a sofa",-2000000f,"30-04-2024"),
+                        Expense("Payed for account",3000000f,"30-04-2024"),
+                        Expense("Payed for electricity",4000000f,"30-04-2024"),
+                        Expense("Payed for internet usage",-5000000f,"30-04-2024"),
+                        Expense("Payed for water usage",5000000f,"30-04-2024"),
+                        Expense("Bought a computer",5000000f,"30-04-2024"),
 
 
                     )
